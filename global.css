@@ -1,0 +1,21 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+:root{
+   /* Color styles */
+--dankort--rød: #E21E27;
+--skifergrå: #1E1E1E;
+--limegrøn: #81D979;
+--limegrøn--pastel: #A1EAAC;
+--himmelblå: #3BB7EA;
+--himmelblå--pastel: #90D9F8;
+--solsikkegul: #FFD998;
+--solsikkegul--pastel: #FFE8B6;
+
+/* Text-size styles */
+--h1--raleway: 40px;
+--h2--raleway: 36px;
+--h3--raleway: 32px;
+--paragraffer--raleway: 16px; 
+}
