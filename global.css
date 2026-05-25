@@ -1,21 +1,297 @@
-*{
-    margin: 0;
-    padding: 0;
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Raleway;
+  font-weight: 800;
+  font-size: var(--h1--raleway);
 }
-:root{
-   /* Color styles */
---dankort--rød: #E21E27;
---skifergrå: #1E1E1E;
---limegrøn: #81D979;
---limegrøn--pastel: #A1EAAC;
---himmelblå: #3BB7EA;
---himmelblå--pastel: #90D9F8;
---solsikkegul: #FFD998;
---solsikkegul--pastel: #FFE8B6;
+img {
+  width: 100%;
+  height: auto;
+}
+:root {
+  /* Color styles */
+  --dankort--rød: #e21e27;
+  --skifergrå: #1e1e1e;
+  --limegrøn: #81d979;
+  --limegrøn--pastel: #a1eaac;
+  --himmelblå: #3bb7ea;
+  --himmelblå--pastel: #90d9f8;
+  --solsikkegul: #ffd998;
+  --solsikkegul--pastel: #ffe8b6;
 
-/* Text-size styles */
---h1--raleway: 40px;
---h2--raleway: 36px;
---h3--raleway: 32px;
---paragraffer--raleway: 16px; 
+  /* Text-size styles */
+  --h1--raleway: 40px;
+  --h2--raleway: 36px;
+  --h3--raleway: 32px;
+  --paragraffer--raleway: 16px;
+}
+
+/************** HEADER ****************/
+header {
+  height: 80px;
+  top: 0;
+  position: sticky;
+  backdrop-filter: blur(10px);
+  background-color: rgba(164, 164, 164, 0.368);
+  z-index: 10;
+}
+#headerContainer {
+  max-width: 1400px;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+}
+
+ul {
+  display: flex;
+  list-style: none;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  width: 360px;
+}
+
+ul li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  font-size: var(--paragraffer--raleway);
+  height: 100%;
+  padding: 0 5px;
+
+  text-align: center;
+}
+
+ul li:hover {
+  border: 2px var(--skifergrå);
+  border-style: none none solid none;
+}
+#logo {
+  height: 100%;
+  display: flex;
+}
+#logo > img {
+  max-height: 45px;
+  place-self: center;
+  padding-left: 35px;
+}
+/****************************************/
+
+/***********Hero**************/
+#heroContainer {
+  border: red solid 3px;
+  display: grid;
+  margin: auto;
+  width: 90vw;
+}
+ol {
+  background-color: white;
+  height: 55px;
+  grid-row: 1/2;
+  grid-column: 1/2;
+  width: 45vw;
+  display: flex;
+  list-style: none;
+  justify-content: space-between;
+  z-index: 3;
+}
+#herovideoContainer {
+  grid-row: 1/2;
+  grid-column: 1/2;
+  height: 90vh;
+  width: 100%;
+  background-color: black;
+}
+.navKnap {
+  font-size: var(--h2--raleway);
+  background-color: var(--himmelblå);
+  text-decoration: none;
+  color: var(--skifergrå);
+  padding: 10px;
+  border-radius: 10px;
+}
+
+ol > a {
+  background-color: var(--limegrøn);
+}
+
+/*****************************/
+p {
+  font-weight: 500;
+  font-size: var(--paragraffer--raleway);
+  max-width: 65ch;
+}
+
+#skrivOp {
+  place-self: center;
+}
+
+/****************************************************************/
+/********* En Hel masse CSS til bank søge funktionen ************/
+/****************************************************************/
+.dd-wrap {
+  position: relative;
+  width: 400px;
+  font-family: sans-serif;
+}
+
+.dd-trigger {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 16px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  background: #fff;
+  cursor: pointer;
+  font-size: 40px;
+  color: #888;
+  user-select: none;
+}
+.dd-trigger:hover {
+  border-color: #999;
+}
+.dd-trigger.open .arrow {
+  transform: rotate(180deg);
+}
+.dd-trigger.selected {
+  color: #111;
+}
+.arrow {
+  font-size: 16px;
+  transition: transform 0.15s;
+  display: inline-block;
+}
+
+.dd-panel {
+  display: none;
+  position: absolute;
+  top: calc(100% + 4px);
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--himmelblå--pastel);
+  border-radius: 10px;
+  min-width: 200px;
+  z-index: 100;
+  overflow: hidden;
+}
+.dd-panel::before {
+  content: "";
+  position: absolute;
+  top: -6px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-bottom: 6px solid #1a1a1a;
+}
+.dd-panel.open {
+  display: block;
+}
+
+.dd-search {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 10px 14px;
+  border: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  background: transparent;
+  color: var(--skifergrå);
+  font-size: 16px;
+  outline: none;
+}
+.dd-search::placeholder {
+  color: var(--skifergrå);
+}
+
+.dd-list {
+  max-height: 180px;
+  overflow-y: auto;
+}
+
+.dd-item {
+  padding: 11px 20px;
+  color: var(--skifergrå);
+  font-size: 15px;
+  cursor: pointer;
+  transition: background 0.1s;
+}
+.dd-item:hover {
+  background: rgba(255, 255, 255, 0.08);
+}
+.dd-item.hidden {
+  display: none;
+}
+
+.dd-empty {
+  padding: 12px 20px;
+  color: var(--skifergrå);
+  font-size: 14px;
+  display: none;
+}
+/****************************************************************/
+/****************************************************************/
+/****************************************************************/
+/****************************************************************/
+
+/*******Zigzag********/
+#zigzagSection {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  place-items: center;
+}
+.zigzagImg {
+  border: dashed orange 5px;
+  border-radius: 20px 100px 20px 100px;
+  aspect-ratio: 16/9;
+  height: 40vh;
+}
+
+/**********************/
+
+/*********Skriv dig op*************/
+#skrivOpInfo {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--himmelblå--pastel);
+  width: 10rem;
+  height: 8rem;
+  place-content: center;
+  align-items: center;
+  padding: 20px;
+  border-radius: 20px;
+}
+#bankLogo {
+  margin-top: 50px;
+}
+#bankLogo > img {
+  place-self: end center;
+  max-width: 200px;
+}
+#bankNavn {
+}
+#link {
+  background-color: var(--dankort--rød);
+  transition: 0.1s;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  border-radius: 20px;
+}
+#link > * {
+  color: #fff;
+  text-decoration: none;
+  text-align: center;
+  place-self: center;
+}
+#link:hover {
+  background-color: #ff767d;
+}
+#tider {
+}
+#telefon {
 }

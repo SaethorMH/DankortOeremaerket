@@ -1,28 +1,131 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="da">
-<head>
-<meta name="robots" content="noindex, nofollow">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+  <head>
+    <meta name="robots" content="noindex, nofollow" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+
     <title>Dankort Øremærket</title>
 
-    <link rel="stylesheet" href="global.css">
-</head>
-<body>
-<header>
-</header>
-<main>
-<section id="heroSection">
-</section>
-<section id="cardsSection"></section>
-<section id="oeretaellerSection"></section>
-<section id="zigzagSection"></section>
-<section id="skrivopSection"></section>
-</main>
-<footer>
+    <link rel="stylesheet" href="global.css" />
+  </head>
+  <body>
+    <header>
+      <div id="headerContainer">
+        <a href="#" id="logo"
+          ><img src="./images/DK_Logo_CMYK.svg" alt="dankort logo"
+        /></a>
+        <ul>
+          <li>Erhverv</li>
+          <li>Privat</li>
+          <li>Dankort Øremærket</li>
+        </ul>
+      </div>
+    </header>
+    <main>
+      <section id="heroSection">
+        <div id="heroContainer">
+          <ol>
+            <li><a href="#oeretaellerSection" class="navKnap">Øremærket</a></li>
+            <li><a href="#zigzagSection" class="navKnap">Fordele</a></li>
+            <li>
+              <a href="#skrivopSection" class="navKnap">Bestil Dankort</a>
+            </li>
+          </ol>
 
-</footer>
-    <script src="script.js"></script>
-</body>
+          <div id="herovideoContainer"></div>
+        </div>
+
+        <h1>Hvad er Dankort Øremærket?</h1>
+      </section>
+      <section id="cardsSection"></section>
+      <section id="oeretaellerSection">
+        <div id="taellerContainer">
+          <div id="stortaeller"></div>
+          <div class="lilletaeller">
+            <p></p>
+            <h1></h1>
+            <p></p>
+          </div>
+          <div class="lilletaeller">
+            <p></p>
+            <h1></h1>
+            <p></p>
+          </div>
+          <div class="lilletaeller">
+            <p></p>
+            <h1></h1>
+            <p></p>
+          </div>
+        </div>
+      </section>
+      <section id="zigzagSection">
+        <div class="zigzagImg"></div>
+        <div>
+          <h1>Det lokale alternativ</h1>
+          <p>
+            Dankort Øremærket er et initiativ, hvor der automatisk doneres 1 øre
+            til Den Danske Naturfond, hver gang du betaler med dit Dankort. Det
+            koster ikke dig ekstra, og det gælder alle betalinger, uanset om du
+            bruger det fysiske kort eller mobilen. [1, 2, 3, 4, 5]
+          </p>
+        </div>
+        <div>
+          <h1>Skaber større sikkerhed</h1>
+          <p>
+            Dankort Øremærket er et initiativ, hvor der automatisk doneres 1 øre
+            til Danmarks Naturfond. Det koster dig ikke ekstra, og det gælder
+            alle betalinger, uanset om du bruger det fysiske kort eller mobilen.
+          </p>
+        </div>
+        <div class="zigzagImg"></div>
+        <div class="zigzagImg"></div>
+
+        <div>
+          <h1>Billigere betalinger til butikker</h1>
+          <p>
+            Dankort Øremærket er et initiativ, hvor ikke dig ekstra, og det
+            gælder alle betalinger, uanset om du bruger det fysiske kort eller
+            mobilen.
+          </p>
+        </div>
+      </section>
+      <section id="skrivopSection">
+        <div id="skrivOp">
+          <div class="dd-wrap" id="dd">
+            <div class="dd-trigger" id="trigger">
+              <span id="label">Find din bank</span>
+              <span class="arrow">▼</span>
+            </div>
+            <div class="dd-panel" id="panel">
+              <input class="dd-search" id="search" placeholder="Søg…" />
+              <div class="dd-list" id="list">
+                <div class="dd-item" data-value="Sydbank">Sydbank</div>
+                <div class="dd-item" data-value="Østbank">Østbank</div>
+                <div class="dd-item" data-value="Nordbank">Nordbank</div>
+              </div>
+              <div class="dd-empty" id="empty">Ingen resultater</div>
+            </div>
+          </div>
+
+          <div id="bankLogo"></div>
+          <div id="skrivOpInfo">
+            <h1 id="bankNavn"></h1>
+            <div id="link"></div>
+            <div id="tider"></div>
+            <div id="telefon"></div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer></footer>
+    <script type="module" src="script.js"></script>
+  </body>
 </html>
