@@ -87,6 +87,11 @@ header {
 /****************************************/
 
 /***********Hero**************/
+.hero_h1 {
+  width: 90vw;
+  padding: 20px;
+  margin: auto;
+}
 #heroContainer {
   /* border: red solid 3px; */
   border-radius: 80px;
@@ -358,13 +363,59 @@ p {
 #zigzagSection {
   display: grid;
   grid-template-columns: 1fr 1fr;
+  place-self: center;
   place-items: center;
+  width: 90vw;
+  gap: 50px;
 }
 .zigzagImg {
-  border: dashed orange 5px;
   border-radius: 20px 100px 20px 100px;
   aspect-ratio: 16/9;
   height: 40vh;
+
+  overflow: hidden;
+}
+
+.text_zigzag {
+  padding: 10px 70px 30px 70px;
+}
+
+.h2_zigzag {
+  font-size: var(--h2--raleway);
+  margin-bottom: 20px;
+}
+
+.ore_point {
+  font-size: var(--paragraffer--raleway);
+  margin-top: 15px;
+  list-style-type: none;
+}
+
+.Read_more {
+  font-size: var(--paragraffer--raleway);
+  color: var(--dankort--rød);
+  margin-top: 20px;
+  cursor: pointer;
+}
+
+@media (max-width: 800px) {
+  #zigzagSection {
+    display: flex;
+    flex-direction: column;
+    width: 90vw;
+  }
+
+  .text_zigzag {
+    padding: 10px;
+  }
+
+  #text_2 {
+    order: 2;
+  }
+
+  #nr_2_pic {
+    order: 1;
+  }
 }
 
 /**********************/
