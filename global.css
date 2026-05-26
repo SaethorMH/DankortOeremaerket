@@ -4,6 +4,7 @@
   font-family: Raleway;
   font-weight: 800;
   font-size: var(--h1--raleway);
+  color: var(--skifergrå);
 }
 img {
   width: 100%;
@@ -26,7 +27,10 @@ img {
   --h3--raleway: 32px;
   --paragraffer--raleway: 16px;
 }
-
+.tal {
+  font-family: Sora;
+  font-weight: 400;
+}
 /************** HEADER ****************/
 header {
   height: 80px;
@@ -35,6 +39,7 @@ header {
   backdrop-filter: blur(10px);
   background-color: rgba(164, 164, 164, 0.368);
   z-index: 10;
+  margin-bottom: 1rem;
 }
 #headerContainer {
   max-width: 1400px;
@@ -45,7 +50,7 @@ header {
   margin: 0 auto;
 }
 
-ul {
+.headerList {
   display: flex;
   list-style: none;
   justify-content: space-between;
@@ -54,7 +59,7 @@ ul {
   width: 360px;
 }
 
-ul li {
+.headerListElement {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -66,7 +71,7 @@ ul li {
   text-align: center;
 }
 
-ul li:hover {
+.headerListElement:hover {
   border: 2px var(--skifergrå);
   border-style: none none solid none;
 }
@@ -88,21 +93,26 @@ ul li:hover {
   margin: auto;
 }
 #heroContainer {
-  border: red solid 3px;
+  /* border: red solid 3px; */
+  border-radius: 80px;
+  overflow: hidden;
   display: grid;
   margin: auto;
   width: 90vw;
 }
 ol {
+  overflow: hidden;
   background-color: white;
-  height: 55px;
+  padding-right: 20px;
+  height: 80px;
   grid-row: 1/2;
   grid-column: 1/2;
-  width: 45vw;
+  width: 45%;
   display: flex;
   list-style: none;
   justify-content: space-between;
   z-index: 3;
+  border-radius: 0 0 20px 0;
 }
 #herovideoContainer {
   grid-row: 1/2;
@@ -110,21 +120,127 @@ ol {
   height: 90vh;
   width: 100%;
   background-color: black;
+  iframe {
+    margin-top: -3rem;
+  }
+}
+ol li {
+  background-color: var(--limegrøn);
+  height: 60%;
+  border-radius: 10px;
+  padding: 10px;
+  transition: 0.1s;
 }
 .navKnap {
-  font-size: var(--h2--raleway);
-  background-color: var(--himmelblå);
+  font-size: var(--h1--raleway);
   text-decoration: none;
   color: var(--skifergrå);
-  padding: 10px;
-  border-radius: 10px;
+}
+#knap1 {
+  padding-left: 40px;
+}
+ol li:hover {
+  background-color: var(--limegrøn--pastel);
+}
+/* #knap2 {
+  background-color: var(--himmelblå--pastel);
+}
+#knap3 {
+  background-color: #fb545d;
+  a {
+    color: white;
+  }
 }
 
-ol > a {
+#knap1:hover {
   background-color: var(--limegrøn);
 }
+#knap2:hover {
+  background-color: var(--himmelblå);
+}
+#knap3:hover {
+  background-color: var(--dankort--rød);
+  a {
+    color: white;
+  }
+} */
 
 /*****************************/
+
+/********************************Card Section*************************************/
+#cardContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+}
+#card1 {
+}
+#card1 {
+}
+#card1 {
+}
+
+/********************************Card section slut*************************************/
+/********************Tæller***********************/
+#oeretaellerSection h1 {
+  text-align: center;
+}
+#taellerContainerContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 1rem 3rem 0 3rem;
+  margin: auto;
+}
+@media (min-width: 800px) {
+  #taellerContainerContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    padding: 1rem 3rem 0 3rem;
+    margin: auto;
+  }
+}
+
+#taellerContainer {
+  border-radius: 100px 5px 100px 5px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  min-width: 500px;
+  width: 90vw;
+  max-width: 900px;
+}
+#stortaeller {
+  grid-column: 1/4;
+  padding: 1rem;
+  background-color: var(--himmelblå--pastel);
+  border-radius: 5px 5px 5px 5px;
+  margin: 3px;
+  text-align: center;
+}
+#storttal {
+  font-weight: 200;
+  font-size: 60px;
+}
+#stortaeller > h2 {
+  font-weight: 200;
+}
+.lilletaeller {
+  margin: 3px;
+  background-color: var(--himmelblå--pastel);
+  place-content: center;
+  text-align: center;
+}
+@media (min-width: 800px) {
+  #taellerContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
+}
+/*************************************************/
+
 p {
   font-weight: 500;
   font-size: var(--paragraffer--raleway);
@@ -223,7 +339,7 @@ p {
   color: var(--skifergrå);
   font-size: 15px;
   cursor: pointer;
-  transition: background 0.1s;
+  transition: 0.1s;
 }
 .dd-item:hover {
   background: rgba(255, 255, 255, 0.08);
@@ -325,24 +441,88 @@ p {
 }
 #bankNavn {
 }
-#link {
-  background-color: var(--dankort--rød);
-  transition: 0.1s;
+#linkContainer {
+  height: 100px;
   align-items: center;
   justify-content: center;
+  place-content: center;
+}
+#link {
   padding: 20px;
   border-radius: 20px;
-}
-#link > * {
+  background-color: var(--dankort--rød);
+  transition: 0.1s ease;
   color: #fff;
   text-decoration: none;
   text-align: center;
   place-self: center;
 }
 #link:hover {
-  background-color: #ff767d;
+  background-color: #a00008;
 }
 #tider {
 }
 #telefon {
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  margin: 5vw;
+}
+
+#graaFooter {
+  width: 100%;
+  height: 100%;
+  padding-top: 3rem;
+  background-color: lightgrey;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+}
+#graaFooter h3 {
+  margin-left: 1.8rem;
+  font-size: var(--paragraffer--raleway);
+  font-weight: 800;
+}
+
+.footerList {
+  display: flex;
+  flex-direction: column;
+  margin: 0rem 2rem 1rem 1.7rem;
+  list-style: none;
+}
+.footerListElement {
+  font-weight: 400;
+  font-size: 14px;
+  margin: 5px;
+}
+.footerListElement::before {
+  content: "⮚"; /* Insert content that looks like bullets */
+  padding-right: 8px;
+  color: red; /* Or a color you prefer */
+}
+.footerListElement:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+#roedFooter {
+  border-radius: 20px;
+  background-color: var(--dankort--rød);
+  padding: 1rem;
+  h1 {
+    color: white;
+  }
+}
+#footerLogo {
+  max-height: 50px;
+}
+@media (min-width: 840px) {
+  footer {
+    flex-direction: row;
+  }
+  #graaFooter {
+    flex-direction: row;
+  }
 }
