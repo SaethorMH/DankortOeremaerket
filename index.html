@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&family=Sora:wght@100..800&display=swap"
       rel="stylesheet"
     />
 
@@ -22,10 +22,10 @@
         <a href="#" id="logo"
           ><img src="./images/DK_Logo_CMYK.svg" alt="dankort logo"
         /></a>
-        <ul>
-          <li>Erhverv</li>
-          <li>Privat</li>
-          <li>Dankort Øremærket</li>
+        <ul class="headerList">
+          <li class="headerListElement">Erhverv</li>
+          <li class="headerListElement">Privat</li>
+          <li class="headerListElement">Dankort Øremærket</li>
         </ul>
       </div>
     </header>
@@ -33,36 +33,84 @@
       <section id="heroSection">
         <div id="heroContainer">
           <ol>
-            <li><a href="#oeretaellerSection" class="navKnap">Øremærket</a></li>
-            <li><a href="#zigzagSection" class="navKnap">Fordele</a></li>
-            <li>
+            <li id="knap1">
+              <a href="#oeretaellerSection" class="navKnap">Øremærket</a>
+            </li>
+            <li id="knap2">
+              <a href="#zigzagSection" class="navKnap">Fordele</a>
+            </li>
+            <li id="knap3">
               <a href="#skrivopSection" class="navKnap">Bestil Dankort</a>
             </li>
           </ol>
 
-          <div id="herovideoContainer"></div>
+          <div id="herovideoContainer">
+            <iframe
+              width="100%"
+              height="130%"
+              src="https://www.youtube.com/embed/aplr9BtolZc?autoplay=1&controls=0&disablekb=1&fs=0&rel=0&loop=1&playlist=aplr9BtolZc;"
+              frameborder="0"
+              allow="
+                accelerometer;
+                autoplay;
+                clipboard-write;
+                encrypted-media;
+                gyroscope;
+                picture-in-picture;
+                web-share;
+                controls;
+                fs;
+                disablekb;
+                rel;
+                loop;
+                playlist;
+              "
+              referrerpolicy="strict-origin-when-cross-origin"
+              allowfullscreen
+            ></iframe>
+          </div>
         </div>
 
         <h1>Hvad er Dankort Øremærket?</h1>
       </section>
-      <section id="cardsSection"></section>
+      <section id="cardsSection">
+        <div id="cardContainer">
+          <div class="card" id="card1"></div>
+          <div class="card" id="card2"></div>
+          <div class="card" id="card3"></div>
+        </div>
+      </section>
       <section id="oeretaellerSection">
-        <div id="taellerContainer">
-          <div id="stortaeller"></div>
-          <div class="lilletaeller">
-            <p></p>
-            <h1></h1>
-            <p></p>
-          </div>
-          <div class="lilletaeller">
-            <p></p>
-            <h1></h1>
-            <p></p>
-          </div>
-          <div class="lilletaeller">
-            <p></p>
-            <h1></h1>
-            <p></p>
+        <h1>Øremærket arbejder sammen med Den Danske Naturfond</h1>
+
+        <div id="taellerContainerContainer">
+          <p>
+            Dankort Øremærket er et initiativ, hvor der automatisk doneres 1 øre
+            til Den Danske Naturfond, hver gang du betaler med dit Dankort. Det
+            koster ikke dig ekstra, og det gælder alle betalinger, uanset om du
+            bruger det fysiske kort eller mobilen.
+          </p>
+
+          <div id="taellerContainer">
+            <div id="stortaeller">
+              <h2>Estimeret donation indtil videre</h2>
+              <h1 class="tal" id="storttal">1231142</h1>
+            </div>
+            <div class="lilletaeller">
+              <p>Det svarer til</p>
+              <h3 class="tal">283.252 m²</h3>
+              <p>naturområde</p>
+            </div>
+            <div class="lilletaeller">
+              <p>Eller ca. størrelsen på</p>
+              <h3 class="tal">40</h3>
+              <p>fodboldbaner</p>
+            </div>
+            <div class="lilletaeller">
+              <p>eller</p>
+              <h3 class="tal">56.651</h3>
+              <p>4-personers telte</p>
+            </div>
           </div>
         </div>
       </section>
@@ -118,14 +166,51 @@
           <div id="bankLogo"></div>
           <div id="skrivOpInfo">
             <h1 id="bankNavn"></h1>
-            <div id="link"></div>
+            <div id="linkContainer"></div>
             <div id="tider"></div>
             <div id="telefon"></div>
           </div>
         </div>
       </section>
     </main>
-    <footer></footer>
+    <footer>
+      <div id="graaFooter">
+        <div>
+          <h3>Dankort</h3>
+          <ul class="footerList">
+            <li class="footerListElement">Om Dankort</li>
+            <li class="footerListElement">Presse</li>
+            <li class="footerListElement">Download logoer</li>
+            <li class="footerListElement">Dankort schemeregler</li>
+          </ul>
+        </div>
+        <div>
+          <h3>Support</h3>
+          <ul class="footerList">
+            <li class="footerListElement">Kontakt salg</li>
+            <li class="footerListElement">Kontakt kundeservice</li>
+            <li class="footerListElement">Support erhverv</li>
+            <li class="footerListElement">Support privat</li>
+          </ul>
+        </div>
+        <div>
+          <h3>Politikker</h3>
+          <ul class="footerList">
+            <li class="footerListElement">Privatlivspolitikker</li>
+            <li class="footerListElement">Cookies</li>
+            <li class="footerListElement">AEE regulativ</li>
+          </ul>
+        </div>
+      </div>
+      <div id="roedFooter">
+        <img
+          id="footerLogo"
+          src="./images/DK_Logo_CMYK.svg"
+          alt="Dankort Logoet"
+        />
+        <h1>Når vi handler sammen</h1>
+      </div>
+    </footer>
     <script type="module" src="script.js"></script>
   </body>
 </html>
