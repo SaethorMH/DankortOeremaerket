@@ -16,7 +16,7 @@ let taellerTal = 102.01;
 const storttal = document.querySelector("#storttal");
 
 /*****************************************************************/
-/*************En hel masse js til søge bank funktion *************/
+/*************En hel masse js til søge bank funktion lavet med hjælp af AI *************/
 /*****************************************************************/
 
 const trigger = document.getElementById("trigger");

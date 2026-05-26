@@ -94,7 +94,7 @@ header {
 }
 #heroContainer {
   /* border: red solid 3px; */
-  border-radius: 80px;
+  border-radius: 50px;
   overflow: hidden;
   display: grid;
   margin: auto;
@@ -121,18 +121,21 @@ ol {
   width: 100%;
   background-color: black;
   iframe {
-    margin-top: -3rem;
+    margin-top: -100%;
+    height: 300vh;
   }
 }
 ol li {
   background-color: var(--limegrøn);
+
   height: 60%;
   border-radius: 10px;
   padding: 10px;
   transition: 0.1s;
 }
 .navKnap {
-  font-size: var(--h1--raleway);
+  font-size: clamp(var(--paragraffer--raleway), calc(1vw * 2), 32px);
+
   text-decoration: none;
   color: var(--skifergrå);
 }
@@ -165,22 +168,60 @@ ol li:hover {
   }
 } */
 
+@media (max-width: 800px) {
+  .navKnap {
+    font-size: var(--h2--raleway);
+  }
+}
 /*****************************/
 
 /********************************Card Section*************************************/
 #cardContainer {
+  margin: auto;
+  height: 600px;
+  width: 1000px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr;
+  gap: 10px;
+}
+.card {
+  max-width: 70vw;
+  height: 100%;
+  width: 100%;
+  border-radius: 5px 150px 5px 150px;
+  transition: 0.2s;
+  place-self: center;
+}
+.card:hover {
+  transform: scale(1.2);
 }
 #card1 {
+  background-color: var(--solsikkegul--pastel);
+  grid-column: 1/2;
+  grid-row: 3/4;
 }
-#card1 {
+#card2 {
+  background-color: var(--himmelblå--pastel);
+  grid-column: 2/3;
+  grid-row: 2/3;
 }
-#card1 {
+#card3 {
+  background-color: var(--limegrøn--pastel);
+  grid-column: 3/4;
+  grid-row: 1/2;
+}
+@media (max-width: 800px) {
+  #cardContainer {
+    display: flex;
+    flex-direction: column;
+    margin: 5vw;
+    width: 100%;
+  }
 }
 
 /********************************Card section slut*************************************/
+
 /********************Tæller***********************/
 #oeretaellerSection h1 {
   text-align: center;
@@ -192,22 +233,14 @@ ol li:hover {
   padding: 1rem 3rem 0 3rem;
   margin: auto;
 }
-@media (min-width: 800px) {
-  #taellerContainerContainer {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 20px;
-    padding: 1rem 3rem 0 3rem;
-    margin: auto;
-  }
-}
 
 #taellerContainer {
+  place-self: center;
   border-radius: 100px 5px 100px 5px;
   overflow: hidden;
   display: flex;
   flex-direction: column;
-  min-width: 500px;
+  min-width: 70%;
   width: 90vw;
   max-width: 900px;
 }
@@ -221,7 +254,7 @@ ol li:hover {
 }
 #storttal {
   font-weight: 200;
-  font-size: 60px;
+  font-size: var(--h2--raleway);
 }
 #stortaeller > h2 {
   font-weight: 200;
@@ -233,10 +266,20 @@ ol li:hover {
   text-align: center;
 }
 @media (min-width: 800px) {
+  #taellerContainerContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    padding: 1rem 3rem 0 3rem;
+    margin: auto;
+  }
   #taellerContainer {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr;
+  }
+  #storttal {
+    font-size: 60px;
   }
 }
 /*************************************************/
@@ -251,9 +294,9 @@ p {
   place-self: center;
 }
 
-/****************************************************************/
-/********* En Hel masse CSS til bank søge funktionen ************/
-/****************************************************************/
+/***************************************************************************************/
+/********* En Hel masse CSS til bank søge funktionen lavet ved hjælp af AI ************/
+/***************************************************************************************/
 .dd-wrap {
   position: relative;
   width: 400px;
