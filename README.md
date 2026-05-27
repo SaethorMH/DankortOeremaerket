@@ -90,9 +90,9 @@ I supabase kan man lave tabeller med rækker af objekter der alle indeholder de 
 5. Merge til main når det virkede
 
 ## Mulige forbedringer
--Video i højere kvalitet
--Opover til zigzag-element
--Siden skal være mere responsiv
+- Video i højere kvalitet
+- Opover til zigzag-element
+- Siden skal være mere responsiv
 -
 
 ---
