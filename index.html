@@ -5,7 +5,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-      <link rel="icon" type="image/x-icon" href="./images/DK_Logo_CMYK.svg">
+    <link rel="icon" type="image/x-icon" href="./images/DK_Logo_CMYK.svg" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -49,8 +49,8 @@
 
           <div id="herovideoContainer">
             <iframe
+              height="100%"
               width="100%"
-              height="200vh"
               src="https://www.youtube.com/embed/aplr9BtolZc?autoplay=1&controls=0&disablekb=1&fs=0&rel=0&loop=1&playlist=aplr9BtolZc;"
               frameborder="0"
               allow="
@@ -78,14 +78,45 @@
       </section>
       <section id="cardsSection">
         <div id="cardContainer">
-          <div class="card" id="card1"></div>
-          <div class="card" id="card2"></div>
-          <div class="card" id="card3"></div>
+          <div class="card" id="card1">
+            <h3>
+              Lokale<br />
+              Danmark
+            </h3>
+
+            <ul>
+              <li>Din købmand betaler færre afgifter</li>
+              <li>Dankort er kun dansk</li>
+              <li>Har i været der for danskerene siden 1983</li>
+            </ul>
+          </div>
+          <div class="card" id="card2">
+            <h3>
+              Sikrere<br />
+              Danmark
+            </h3>
+            <ul>
+              <li>Dankort virker når alt andet fejler</li>
+              <li>Uafhægigt af internationale banker</li>
+              <li>0 sager af forfalskning efter tilføjelse af chip</li>
+            </ul>
+          </div>
+          <div class="card" id="card3">
+            <h3>
+              Grønnere<br />
+              Danmark
+            </h3>
+            <ul>
+              <li>Hver transaktion doneres der 1 øre</li>
+              <li>I sammarbejde med Den Danske Naturfond</li>
+              <li>
+                Vi donérer som minimum <span class="tal">10.000.000</span>kr
+              </li>
+            </ul>
+          </div>
         </div>
       </section>
       <section id="oeretaellerSection">
-        
-
         <div id="taellerContainerContainer">
           <p>
             Dankort Øremærket er et initiativ, hvor der automatisk doneres 1 øre
@@ -117,96 +148,94 @@
           </div>
         </div>
       </section>
+      <div id="sammarbejdsContainer">
+        <img
+          id="sLogo1"
+          src="./images/sammarbejdspartnere.webp"
+          alt="Sammarbejdspartneres logo'er"
+        />
+        <img
+          id="sLogo2"
+          src="./images/sammarbejdspartnere.webp"
+          alt="Sammarbejdspartneres logo'er"
+        />
+      </div>
       <section id="zigzagSection">
-        <div class="zigzagImg"></div>
-        <div>
-          <h1>Det lokale alternativ</h1>
+        <div class="zigzagImg">
+          <img src="images/cool_handshake.webp" alt="Håndtryk" />
+        </div>
+        <div class="text_zigzag">
+          <h2 class="h2_zigzag">Det lokale alternativ</h2>
           <p>
             Dankort Øremærket er et initiativ, hvor der automatisk doneres 1 øre
-            til Den Danske Naturfond, hver gang du betaler med dit Dankort. Det
-            koster ikke dig ekstra, og det gælder alle betalinger, uanset om du
-            bruger det fysiske kort eller mobilen. [1, 2, 3, 4, 5]
+            til Den Danske Naturfond, hver gang du betaler med dit Dankort.
+            Derud over donere både din bank og buttikken du handler i, 1 øre til
+            Den Danske Naturfond.
           </p>
+
+          <li class="ore_point">
+            Dankort donere 1 øre + Din bank donere 1 øre + Dem du handeler hos
+            donere 1 øre = Endnu mere dansk natur
+          </li>
+
+          <p class="Read_more">Læs mere</p>
         </div>
-        <div class="lilletaeller">
-          <p></p>
-          <h1></h1>
-          <p></p>
+        <div class="text_zigzag" id="text_2">
+          <h2 class="h2_zigzag">Skaber større sikkerhed</h2>
+          <p>
+            Med Dankort er du og dine køb i trykke hænder - både i butikkerne og
+            på nettet. Dankort har med sine sikkerhedsfunktioner og samarbejde
+            med banker og butikker, skabt et trygt betalingsmiljø for alle
+            danskere.
+          </p>
+
+          <li class="ore_point">
+            Stærk kundeautentificering - 2-faktor godkendelse
+          </li>
+          <li class="ore_point">
+            Dankort Secured by Nets - Ekstra sikkerhedstjek ved større onlinekøb
+          </li>
+
+          <p class="Read_more">Læs mere</p>
         </div>
-        <div class="lilletaeller">
-          <p></p>
-          <h1></h1>
-          <p></p>
+        <div class="zigzagImg" id="nr_2_pic">
+          <img src="images/fam_tryghed.webp" alt="Familie tryghed" />
         </div>
-      </div>
-    </section>
+        <div class="zigzagImg">
+          <img src="images/smart_pay.webp" alt="Smart pay" />
+        </div>
 
-    <section id="zigzagSection">
-      <div class="zigzagImg"> <img src="images/cool_handshake.webp" alt="Håndtryk"></div>
-      <div class="text_zigzag">
-        <h2 class="h2_zigzag">Det lokale alternativ</h2>
-        <p>
-          Dankort Øremærket er et initiativ, hvor der automatisk doneres 1 øre til Den Danske Naturfond, hver gang du
-          betaler med dit Dankort. Derud over donere både din bank og buttikken du handler i, 1 øre til Den Danske
-          Naturfond.
-        </p>
+        <div class="text_zigzag">
+          <h2 class="h2_zigzag">I medgang og modgang</h2>
 
-        <li class="ore_point">Dankort donere 1 øre + Din bank donere 1 øre + Dem du handeler hos donere 1 øre = Endnu
-          mere dansk natur</li>
+          <p>
+            Dit fysiske Dankort virker ved betalingsnedbrud, ved at gennemføre
+            betalinger offline, som godkendes når systemet er oppe igen.
+          </p>
 
-        <p class="Read_more">Læs mere</p>
+          <li class="ore_point">Fysiske Dankort virker ved betalingsnedbrud</li>
+          <li class="ore_point">Offline betalinger i op til 7 dage</li>
 
-      </div>
-      <div class="text_zigzag" id="text_2">
-        <h2 class="h2_zigzag">Skaber større sikkerhed</h2>
-        <p>
-          Med Dankort er du og dine køb i trykke hænder - både i butikkerne og på nettet. Dankort har med sine
-          sikkerhedsfunktioner og samarbejde med banker og butikker, skabt et trygt betalingsmiljø for alle danskere.
-        </p>
-
-        <li class="ore_point">Stærk kundeautentificering - 2-faktor godkendelse</li>
-        <li class="ore_point">Dankort Secured by Nets - Ekstra sikkerhedstjek ved større onlinekøb</li>
-
-        <p class="Read_more">Læs mere</p>
-
-
-      </div>
-      <div class="zigzagImg" id="nr_2_pic"> <img src="images/fam_tryghed.webp" alt="Familie tryghed"></div>
-      <div class="zigzagImg"> <img src="images/smart_pay.webp" alt="Smart pay"></div>
-
-      <div class="text_zigzag">
-
-        <h2 class="h2_zigzag">I medgang og modgang</h2>
-
-        <p>
-          Dit fysiske Dankort virker ved betalingsnedbrud, ved at gennemføre betalinger offline, som godkendes når
-          systemet er oppe igen.
-        </p>
-
-        <li class="ore_point">Fysiske Dankort virker ved betalingsnedbrud</li>
-        <li class="ore_point">Offline betalinger i op til 7 dage</li>
-
-        <p class="Read_more">Læs mere</p>
-
-      </div>
-    </section>
-    <section id=" skrivopSection">
-      <div id="skrivOp">
-        <div class="dd-wrap" id="dd">
-          <div class="dd-trigger" id="trigger">
-            <span id="label">Find din bank</span>
-            <span class="arrow">▼</span>
-          </div>
-          <div class="dd-panel" id="panel">
-            <input class="dd-search" id="search" placeholder="Søg…" />
-            <div class="dd-list" id="list">
-              <div class="dd-item" data-value="Sydbank">Sydbank</div>
-              <div class="dd-item" data-value="Østbank">Østbank</div>
-              <div class="dd-item" data-value="Nordbank">Nordbank</div>
+          <p class="Read_more">Læs mere</p>
+        </div>
+      </section>
+      <section id=" skrivopSection">
+        <div id="skrivOp">
+          <div class="dd-wrap" id="dd">
+            <div class="dd-trigger" id="trigger">
+              <span id="label">Find din bank</span>
+              <span class="arrow">▼</span>
             </div>
-            <div class="dd-empty" id="empty">Ingen resultater</div>
+            <div class="dd-panel" id="panel">
+              <input class="dd-search" id="search" placeholder="Søg…" />
+              <div class="dd-list" id="list">
+                <div class="dd-item" data-value="Sydbank">Sydbank</div>
+                <div class="dd-item" data-value="Østbank">Østbank</div>
+                <div class="dd-item" data-value="Nordbank">Nordbank</div>
+              </div>
+              <div class="dd-empty" id="empty">Ingen resultater</div>
+            </div>
           </div>
-        </div>
 
           <div id="bankLogo"></div>
           <div id="skrivOpInfo">

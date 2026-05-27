@@ -96,3 +96,40 @@ setInterval(function talTaeller() {
   storttal.innerHTML = "3.213." + taellerTal.toFixed(2) + "KR";
 }, 25);
 // talTaeller();
+
+const sLogo1 = document.querySelector("#sLogo1");
+const sLogo2 = document.querySelector("#sLogo2");
+const logoTrack = document.querySelector("#sammarbejdsContainer");
+let pos1 = 0;
+let pos2 = 0;
+let lastTime = 0;
+const speed = 0.05;
+
+function animateLogos(time) {
+  if (!lastTime) lastTime = time;
+  const delta = time - lastTime;
+  pos1 += delta * speed;
+  pos2 += delta * speed;
+
+  const trackWidth = logoTrack.offsetWidth;
+  const logo1Width = sLogo1.offsetWidth;
+  const logo2Width = sLogo2.offsetWidth;
+
+  if (pos1 > trackWidth) {
+    pos1 = -logo1Width;
+  }
+  if (pos2 > trackWidth) {
+    pos2 = -logo2Width;
+  }
+
+  sLogo1.style.transform = `translateX(${pos1}px)`;
+  sLogo2.style.transform = `translateX(${pos2}px)`;
+
+  lastTime = time;
+  requestAnimationFrame(animateLogos);
+}
+
+window.addEventListener("load", () => {
+  pos2 = -sLogo2.offsetWidth;
+  requestAnimationFrame(animateLogos);
+});

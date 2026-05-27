@@ -29,7 +29,13 @@ img {
 }
 .tal {
   font-family: Sora;
-  font-weight: 400;
+  font-weight: inherit;
+  font-size: inherit;
+}
+
+section {
+  margin-top: 10vh;
+  margin-bottom: 10vh;
 }
 /************** HEADER ****************/
 header {
@@ -117,13 +123,23 @@ ol {
 #herovideoContainer {
   grid-row: 1/2;
   grid-column: 1/2;
-  height: 90vh;
+  height: 80vh;
+  max-height: 90vh;
   width: 100%;
   background-color: black;
-  iframe {
-    margin-top: -100%;
-    height: 300vh;
-  }
+  overflow: hidden;
+  position: relative;
+}
+
+#herovideoContainer iframe {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 200%;
+  height: 200%;
+  transform: translate(-50%, -50%);
+  transform-origin: center center;
+  border: 0;
 }
 ol li {
   background-color: var(--limegrøn);
@@ -145,32 +161,37 @@ ol li {
 ol li:hover {
   background-color: var(--limegrøn--pastel);
 }
-/* #knap2 {
-  background-color: var(--himmelblå--pastel);
-}
-#knap3 {
-  background-color: #fb545d;
-  a {
-    color: white;
-  }
-}
-
-#knap1:hover {
-  background-color: var(--limegrøn);
-}
-#knap2:hover {
-  background-color: var(--himmelblå);
-}
-#knap3:hover {
-  background-color: var(--dankort--rød);
-  a {
-    color: white;
-  }
-} */
 
 @media (max-width: 800px) {
+  ol {
+    flex-direction: column;
+    height: 40%;
+    gap: 20px;
+    align-items: center;
+  }
+  ol li {
+    margin: 0 10px 10px 25px;
+    align-self: center;
+    width: 100%;
+    height: 100px;
+    border-radius: 20px;
+    padding: 5px;
+    text-align: center;
+    place-content: center;
+  }
   .navKnap {
-    font-size: var(--h2--raleway);
+    font-size: var(--h3--raleway);
+    text-align: center;
+  }
+  .navKnap {
+    max-height: 1rem;
+  }
+  #knap1 {
+    padding-left: 0px;
+  }
+  #herovideoContainer iframe {
+    width: 350%;
+    height: 350%;
   }
 }
 /*****************************/
@@ -183,18 +204,38 @@ ol li:hover {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr;
-  gap: 10px;
+  gap: 5px;
 }
 .card {
+  padding: 5%;
   max-width: 70vw;
   height: 100%;
   width: 100%;
   border-radius: 5px 150px 5px 150px;
-  transition: 0.2s;
+  transition: all 0.2s ease;
   place-self: center;
+}
+.card h1 {
+  font-size: var(--h3--raleway);
+}
+.card ul {
+  padding: 20px;
+  height: 0px;
+  opacity: 0;
+  transition: all 1s ease;
+  margin: 10px;
+}
+.card ul li {
+  font-size: var(--paragraffer--raleway);
+  font-weight: 400;
 }
 .card:hover {
   transform: scale(1.2);
+}
+.card:hover ul {
+  height: 50px;
+  display: block;
+  opacity: 1;
 }
 #card1 {
   background-color: var(--solsikkegul--pastel);
@@ -283,6 +324,21 @@ ol li:hover {
   }
 }
 /*************************************************/
+#sammarbejdsContainer {
+  height: 200px;
+  overflow: hidden;
+  position: relative;
+}
+#sLogo1,
+#sLogo2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: auto;
+  transform: translateX(0);
+  will-change: transform;
+}
 
 p {
   font-weight: 500;
