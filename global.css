@@ -25,6 +25,8 @@ img {
   --h1--raleway: 40px;
   --h2--raleway: 36px;
   --h3--raleway: 32px;
+  --h4--raleway: 22px;
+
   --paragraffer--raleway: 16px;
 }
 .tal {
@@ -297,6 +299,27 @@ p {
 /***************************************************************************************/
 /********* En Hel masse CSS til bank søge funktionen lavet ved hjælp af AI ************/
 /***************************************************************************************/
+.blae_soge {
+  display: flex;
+  gap: 10px;
+}
+
+.find_soge {
+  display: flex;
+  background-color: var(--himmelblå);
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.soge_ikon {
+  display: flex;
+  background-color: var(--himmelblå);
+  width: 30px;
+  height: 30px;
+}
+
+/********* Dropdown CSS *********/
+
 .dd-wrap {
   position: relative;
   width: 400px;
@@ -315,6 +338,7 @@ p {
   font-size: 40px;
   color: #888;
   user-select: none;
+  width: 120px;
 }
 .dd-trigger:hover {
   border-color: #999;
@@ -397,6 +421,7 @@ p {
   font-size: 14px;
   display: none;
 }
+
 /****************************************************************/
 /****************************************************************/
 /****************************************************************/
@@ -414,7 +439,6 @@ p {
 .zigzagImg {
   border-radius: 20px 100px 20px 100px;
   aspect-ratio: 16/9;
-  height: 40vh;
 
   overflow: hidden;
 }
@@ -448,6 +472,11 @@ p {
     width: 90vw;
   }
 
+  .zigzagImg {
+    width: 100%;
+    height: auto;
+  }
+
   .text_zigzag {
     padding: 10px;
   }
@@ -464,17 +493,45 @@ p {
 /**********************/
 
 /*********Skriv dig op*************/
+#skrivOp {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  place-items: center;
+  margin: 100px 100px 50px 250px;
+}
+
+.kort_soge {
+  grid-column: 2 / 3;
+}
+
+.kort_foto {
+  height: 100%;
+}
+
 #skrivOpInfo {
   display: flex;
   flex-direction: column;
   background-color: var(--himmelblå--pastel);
-  width: 10rem;
+  width: 100%;
   height: 8rem;
   place-content: center;
   align-items: center;
   padding: 20px;
   border-radius: 20px;
 }
+
+.hele_sogefelt {
+  display: flex;
+}
+
+#label {
+  font-size: var(--h4--raleway);
+  font-weight: 400;
+  margin-bottom: 10px;
+  padding-right: 20px;
+  padding-left: 10px;
+}
+
 #bankLogo {
   margin-top: 50px;
 }
@@ -507,6 +564,8 @@ p {
 }
 #telefon {
 }
+
+/**************** Footer *******************/
 
 footer {
   display: flex;
