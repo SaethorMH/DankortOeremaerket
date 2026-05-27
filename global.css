@@ -683,6 +683,7 @@ ol li:hover {
   font-size: var(--paragraffer--raleway);
   margin-top: 15px;
   list-style-type: none;
+  font-weight: 800;
 }
 
 .Read_more {
