@@ -29,6 +29,48 @@ img {
 
   --paragraffer--raleway: 16px;
 }
+
+/********************GENERAL***********/
+p {
+  font-weight: 500;
+  font-size: var(--paragraffer--raleway);
+  max-width: 65ch;
+}
+h1 {
+  font-size: var(--h1--raleway);
+}
+h2 {
+  font-size: var(--h2--raleway);
+}
+h3 {
+  font-size: var(--h3--raleway);
+}
+h4 {
+  font-size: var(--h4--raleway);
+}
+
+body {
+  background-image: linear-gradient(
+    white 45%,
+    var(--himmelblå) 45%,
+    white 60%,
+    white 85%,
+    var(--himmelblå--pastel) 100%
+  );
+  background-size: 150px;
+}
+@media (max-width: 800px) {
+  body {
+    background-image: linear-gradient(
+      white 39%,
+      var(--himmelblå) 40%,
+      white 50%,
+      white 85%,
+      var(--himmelblå) 100%
+    );
+    background-size: 150px;
+  }
+}
 .tal {
   font-family: Sora;
   font-weight: inherit;
@@ -55,7 +97,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 0 auto;
+  margin-bottom: 50px;
 }
 
 .headerList {
@@ -95,6 +137,11 @@ header {
 /****************************************/
 
 /***********Hero**************/
+#startTitel {
+  place-self: center;
+  max-width: 75%;
+  margin-bottom: 20px;
+}
 .hero_h1 {
   width: 90vw;
   padding: 20px;
@@ -107,6 +154,7 @@ header {
   display: grid;
   margin: auto;
   width: 90vw;
+  height: 80%;
 }
 ol {
   overflow: hidden;
@@ -125,23 +173,28 @@ ol {
 #herovideoContainer {
   grid-row: 1/2;
   grid-column: 1/2;
-  height: 80vh;
+  height: 100%;
   max-height: 90vh;
   width: 100%;
   background-color: black;
   overflow: hidden;
   position: relative;
 }
-
+#herovideoContainer video {
+  width: 1920px;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
 #herovideoContainer iframe {
-  position: absolute;
+  /* position: absolute;
   top: 50%;
   left: 50%;
   width: 200%;
   height: 200%;
   transform: translate(-50%, -50%);
   transform-origin: center center;
-  border: 0;
+  border: 0; */
 }
 ol li {
   background-color: var(--limegrøn);
@@ -199,10 +252,16 @@ ol li:hover {
 /*****************************/
 
 /********************************Card Section*************************************/
+
+#cardsSection h1 {
+  place-self: center;
+  margin-bottom: 30px;
+}
+
 #cardContainer {
   margin: auto;
   height: 600px;
-  width: 1000px;
+  width: 1150px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr;
@@ -224,7 +283,9 @@ ol li:hover {
   padding: 20px;
   height: 0px;
   opacity: 0;
-  transition: all 1s ease;
+  transition:
+    height 0.5s ease,
+    opacity 2s ease;
   margin: 10px;
 }
 .card ul li {
@@ -232,10 +293,10 @@ ol li:hover {
   font-weight: 400;
 }
 .card:hover {
-  transform: scale(1.2);
+  transform: scale(1);
 }
 .card:hover ul {
-  height: 50px;
+  height: 70px;
   display: block;
   opacity: 1;
 }
@@ -258,14 +319,24 @@ ol li:hover {
   #cardContainer {
     display: flex;
     flex-direction: column;
-    margin: 5vw;
+    /* margin: 5vw; */
     width: 100%;
+  }
+  .card ul {
+    list-style: none;
+    opacity: 1;
+    place-self: right;
+    height: 60px;
   }
 }
 
 /********************************Card section slut*************************************/
 
 /********************Tæller***********************/
+#oeretaellerSection {
+  background-color: white;
+  padding-bottom: 50px;
+}
 #oeretaellerSection h1 {
   text-align: center;
 }
@@ -279,7 +350,7 @@ ol li:hover {
 
 #taellerContainer {
   place-self: center;
-  border-radius: 100px 5px 100px 5px;
+  border-radius: 100px 20px 100px 20px;
   overflow: hidden;
   display: flex;
   flex-direction: column;
@@ -308,7 +379,7 @@ ol li:hover {
   place-content: center;
   text-align: center;
 }
-@media (min-width: 800px) {
+@media (min-width: 1200px) {
   #taellerContainerContainer {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -328,8 +399,14 @@ ol li:hover {
 /*************************************************/
 #sammarbejdsContainer {
   height: 200px;
+  max-height: 15vw;
   overflow: hidden;
   position: relative;
+  margin-bottom: 60px;
+}
+#sap {
+  place-self: center;
+  margin-top: 60px;
 }
 #sLogo1,
 #sLogo2 {
@@ -342,44 +419,137 @@ ol li:hover {
   will-change: transform;
 }
 
-p {
-  font-weight: 500;
-  font-size: var(--paragraffer--raleway);
-  max-width: 65ch;
-}
-
-#skrivOp {
-  place-self: center;
-}
-
 /***************************************************************************************/
 /********* En Hel masse CSS til bank søge funktionen lavet ved hjælp af AI ************/
 /***************************************************************************************/
+#skrivOpSectionTitel {
+  font-size: var(--h1--raleway);
+  max-width: 75vw;
+  place-self: center;
+}
+#skrivOp {
+  max-width: 50vw;
+  max-height: 60vh;
+  place-self: center;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  place-items: center;
+}
 .blae_soge {
   display: flex;
-  gap: 10px;
+  width: 100%;
+  height: 60px;
 }
 
 .find_soge {
   display: flex;
-  background-color: var(--himmelblå);
+  background-color: var(--himmelblå--pastel);
   padding: 10px;
   border-radius: 10px;
+  width: 100%;
 }
 
 .soge_ikon {
+  border-radius: 10px 100px 10px 10px;
   display: flex;
-  background-color: var(--himmelblå);
-  width: 30px;
-  height: 30px;
+  background-color: var(--himmelblå--pastel);
+  width: 15%;
 }
 
+/*********Skriv dig op*************/
+.kort_og_soge {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+}
+.kort_soge {
+  grid-column: 2 / 3;
+}
+
+.kort_foto {
+  height: 100%;
+  margin-right: 100px;
+}
+@media (max-width: 800px) {
+  #skrivOp {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    max-width: 100%;
+    max-height: 100%;
+    place-items: center;
+  }
+  .kort_foto {
+    order: 2;
+    margin: 0;
+  }
+}
+#skrivOpInfo {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--himmelblå--pastel);
+  place-content: center;
+  align-items: center;
+  height: 100%;
+  border-radius: 20px;
+}
+
+.hele_sogefelt {
+  display: flex;
+}
+
+#label {
+  vertical-align: center;
+  justify-content: center;
+  min-width: 15ch;
+  font-size: var(--h4--raleway);
+  font-weight: 400;
+  margin-bottom: 10px;
+  margin: auto;
+}
+
+#bankLogo {
+  margin-top: 50px;
+  place-self: center;
+}
+#bankLogo > img {
+  place-self: end center;
+  max-width: 300px;
+}
+--pastel #bankNavn {
+  font-size: var(--h4--raleway);
+}
+#linkContainer {
+  height: 100px;
+  align-items: center;
+  justify-content: center;
+  place-content: center;
+}
+#link {
+  font-size: var(--h4--raleway);
+  padding: 20px;
+  border-radius: 20px;
+  background-color: var(--himmelblå);
+  transition: 0.1s ease;
+  color: var(--skifergrå);
+  text-decoration: none;
+  text-align: center;
+  place-self: center;
+}
+#link:hover {
+  border: 3px var(--skifergrå) solid;
+}
+#tider {
+}
+#telefon {
+}
 /********* Dropdown CSS *********/
 
 .dd-wrap {
   position: relative;
-  width: 400px;
-  font-family: sans-serif;
+  width: 100%;
+  height: 100%;
 }
 
 .dd-trigger {
@@ -394,7 +564,7 @@ p {
   font-size: 40px;
   color: #888;
   user-select: none;
-  width: 120px;
+  width: 100%;
 }
 .dd-trigger:hover {
   border-color: #999;
@@ -406,7 +576,7 @@ p {
   color: #111;
 }
 .arrow {
-  font-size: 16px;
+  font-size: var(--paragraffer--raleway);
   transition: transform 0.15s;
   display: inline-block;
 }
@@ -414,14 +584,15 @@ p {
 .dd-panel {
   display: none;
   position: absolute;
-  top: calc(100% + 4px);
+  top: 8%;
   left: 50%;
   transform: translateX(-50%);
-  background: var(--himmelblå--pastel);
+  background: #fff;
   border-radius: 10px;
-  min-width: 200px;
+  width: 90%;
   z-index: 100;
   overflow: hidden;
+  border: solid 2px black;
 }
 .dd-panel::before {
   content: "";
@@ -445,7 +616,7 @@ p {
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   background: transparent;
   color: var(--skifergrå);
-  font-size: 16px;
+  font-size: var(--paragraffer--raleway);
   outline: none;
 }
 .dd-search::placeholder {
@@ -548,79 +719,6 @@ p {
 
 /**********************/
 
-/*********Skriv dig op*************/
-#skrivOp {
-  display: grid;
-  grid-template-columns: 1fr 2fr;
-  place-items: center;
-  margin: 100px 100px 50px 250px;
-}
-
-.kort_soge {
-  grid-column: 2 / 3;
-}
-
-.kort_foto {
-  height: 100%;
-}
-
-#skrivOpInfo {
-  display: flex;
-  flex-direction: column;
-  background-color: var(--himmelblå--pastel);
-  width: 100%;
-  height: 8rem;
-  place-content: center;
-  align-items: center;
-  padding: 20px;
-  border-radius: 20px;
-}
-
-.hele_sogefelt {
-  display: flex;
-}
-
-#label {
-  font-size: var(--h4--raleway);
-  font-weight: 400;
-  margin-bottom: 10px;
-  padding-right: 20px;
-  padding-left: 10px;
-}
-
-#bankLogo {
-  margin-top: 50px;
-}
-#bankLogo > img {
-  place-self: end center;
-  max-width: 200px;
-}
-#bankNavn {
-}
-#linkContainer {
-  height: 100px;
-  align-items: center;
-  justify-content: center;
-  place-content: center;
-}
-#link {
-  padding: 20px;
-  border-radius: 20px;
-  background-color: var(--dankort--rød);
-  transition: 0.1s ease;
-  color: #fff;
-  text-decoration: none;
-  text-align: center;
-  place-self: center;
-}
-#link:hover {
-  background-color: #a00008;
-}
-#tider {
-}
-#telefon {
-}
-
 /**************** Footer *******************/
 
 footer {
@@ -656,9 +754,9 @@ footer {
   margin: 5px;
 }
 .footerListElement::before {
-  content: "⮚"; /* Insert content that looks like bullets */
+  content: "⮚";
   padding-right: 8px;
-  color: red; /* Or a color you prefer */
+  color: red;
 }
 .footerListElement:hover {
   text-decoration: underline;

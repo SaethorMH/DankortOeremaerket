@@ -32,7 +32,7 @@
   </header>
   <main>
     <section id="heroSection">
-      <h1>Øremærket arbejder sammen med Den Danske Naturfond</h1>
+      <h1 id="startTitel">Øremærket arbejder sammen med Den Danske Naturfond</h1>
       <div id="heroContainer">
         <ol>
           <li id="knap1">
@@ -47,29 +47,15 @@
         </ol>
 
         <div id="herovideoContainer">
-          <iframe width="100%" height="200vh"
-            src="https://www.youtube.com/embed/aplr9BtolZc?autoplay=1&controls=0&disablekb=1&fs=0&rel=0&loop=1&playlist=aplr9BtolZc;"
-            frameborder="0" allow="
-                accelerometer;
-                autoplay;
-                clipboard-write;
-                encrypted-media;
-                gyroscope;
-                picture-in-picture;
-                web-share;
-                controls;
-                fs;
-                disablekb;
-                rel;
-                loop;
-                playlist;
-              " referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          <video src="./images/Hero_final_boss.mp4" autoplay muted loop playsinline ></video>
+          
         </div>
       </div>
 
-        <h1>Hvad er Dankort Øremærket?</h1>
+        
       </section>
       <section id="cardsSection">
+        <h1 >Hvad giver Dankort Øremærket?</h1>
         <div id="cardContainer">
           <div class="card" id="card1">
             <h3>
@@ -111,12 +97,15 @@
       </section>
       <section id="oeretaellerSection">
         <div id="taellerContainerContainer">
-          <p>
+          <div>
+            <h4>Dankort donérer til Den Danske Naturfond</h2><p>
             Dankort Øremærket er et initiativ, hvor der automatisk doneres 1 øre
             til Den Danske Naturfond, hver gang du betaler med dit Dankort. Det
             koster ikke dig ekstra, og det gælder alle betalinger, uanset om du
             bruger det fysiske kort eller mobilen.
           </p>
+          </div>
+          
 
           <div id="taellerContainer">
             <div id="stortaeller">
@@ -140,8 +129,8 @@
             </div>
           </div>
         </div>
-      </section>
-      <div id="sammarbejdsContainer">
+        <p id="sap">Sammarbejdspartnere</p>
+        <div id="sammarbejdsContainer">
         <img
           id="sLogo1"
           src="./images/sammarbejdspartnere.webp"
@@ -153,9 +142,11 @@
           alt="Sammarbejdspartneres logo'er"
         />
       </div>
+      </section>
+      
       <section id="zigzagSection">
         <div class="zigzagImg">
-          <img src="images/cool_handshake.webp" alt="Håndtryk" />
+          <img src="./images/shop.webp" alt="Håndtryk" />
         </div>
         <div class="text_zigzag">
           <h2 class="h2_zigzag">Det lokale alternativ</h2>
@@ -192,10 +183,10 @@
           <p class="Read_more">Læs mere</p>
         </div>
         <div class="zigzagImg" id="nr_2_pic">
-          <img src="images/fam_tryghed.webp" alt="Familie tryghed" />
+          <img src="images/happyfamilys.webp" alt="Familie tryghed" />
         </div>
         <div class="zigzagImg">
-          <img src="images/smart_pay.webp" alt="Smart pay" />
+          <img src="images/kort.webp" alt="Smart pay" />
         </div>
 
         <div class="text_zigzag">
@@ -215,25 +206,24 @@
     </section>
 
     <section id=" skrivopSection">
-
+<h4 id="skrivOpSectionTitel">Bestil dit nye Dankort igennem din bank</h4>
       <div id="skrivOp">
 
-        <div class="kort_foto">
-          <img src="images/natur_dankort.webp" alt="">
-        </div>
+        
+          <img class="kort_foto" src="images/natur_dankort.webp" alt="billede af dansk natur">
+        
+        
 
-        <div class="kort_og_soge">
-
-          <div class="dd-wrap" id="dd">
+          <div class="dd-wrap kort_og_soge" id="dd">
 
 
 
             <div class="blae_soge">
 
               <div class="find_soge">
-                <div class="dd-find-bank">
+                
                   <span id="label">Find din bank</span>
-                </div>
+                
 
                 <div class="dd-trigger" id="trigger">
                   <span class="arrow">▼</span>
@@ -260,13 +250,13 @@
 
             <div id="bankLogo"></div>
             <div id="skrivOpInfo">
-              <h1 id="bankNavn"></h1>
-              <div id="linkContainer"></div>
+              <h4 id="bankNavn"><img src="./images/DK_Logo_CMYK.svg"> </h4>
+              
               <div id="tider"></div>
-              <div id="telefon"></div>
+              <div id="telefon"></div><div id="linkContainer"></div>
             </div>
 
-          </div>
+          
 
         </div>
 

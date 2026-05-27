@@ -48,7 +48,7 @@ document.getElementById("list").addEventListener("click", (e) => {
   if (!item) return;
   valgteBank = item.dataset.bankId - 1;
   console.log(valgteBank);
-  label.textContent = item.dataset.value;
+  // label.textContent = item.dataset.value;
   trigger.classList.add("selected");
   trigger.classList.remove("open");
   panel.classList.remove("open");
@@ -87,7 +87,7 @@ function fillData() {
     `<img src="${bank.bankLogo}">`;
   document.querySelector("#bankNavn").innerHTML = `<h1>${bank.bankNavn}</h1>`;
   document.querySelector("#linkContainer").innerHTML =
-    `<a href="${bank.bankLink}" target="_blank" id="link">Skriv dig op Hér!</a>`;
+    `<a href="${bank.bankLink}" target="_blank" id="link">Bestil Dankort</a>`;
   document.querySelector("#tider").innerHTML = `<p>${bank.aabningstider}</p>`;
   document.querySelector("#telefon").innerHTML = `<p>${bank.bankTelefon}</p>`;
 }
@@ -133,3 +133,5 @@ window.addEventListener("load", () => {
   pos2 = -sLogo2.offsetWidth;
   requestAnimationFrame(animateLogos);
 });
+
+document.querySelector("video").play();
