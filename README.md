@@ -6,8 +6,8 @@
 
 ### Links
 
-- GitHub repository:
-- Netlify host:
+- GitHub repository: https://github.com/SaethorMH/DankortOeremaerket
+- Netlify host:https://dankortoeremaerketgruppe7mmd.netlify.app/
 - Figma: https://www.figma.com/design/uK97YvZQmtDjTxSo8bThno/Eksamensprojekt---2.-Semester?node-id=42-37&p=f&t=SksoLn54j0Ri57qo-0
 
 ---
