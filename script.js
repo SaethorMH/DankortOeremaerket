@@ -1,10 +1,7 @@
-const url = `https://mvnwbvtixgopigcrnqrm.supabase.co/rest/v1/Banker?select=*&limit=5&order=id`;
+const url = `https://mvnwbvtixgopigcrnqrm.supabase.co/rest/v1/Banker?select=*&limit=10&order=id`;
 const apiKey = `sb_publishable_ySIb969bk4BcFXEOsKdIww_zyp9KW3L`;
-const options = {
-  headers: {
-    apikey: apiKey,
-  },
-};
+const options = { headers: { apikey: apiKey } };
+
 const data = await fetch(url, options).then((res) => res.json());
 console.log(data);
 const res = await fetch(url, options);
@@ -78,7 +75,9 @@ function resetSearch() {
 
 skrivOpContainer.innerHTML = "";
 data.forEach((bank) => {
-  skrivOpContainer.innerHTML += `<div class="dd-item" data-bank-id=${bank.id} data-value="${bank.bankNavn}">${bank.bankNavn}</div>`;
+  skrivOpContainer.innerHTML += `
+  <div class="dd-item" data-bank-id=${bank.id} data-value="${bank.bankNavn}">${bank.bankNavn}</div>
+  `;
 });
 
 function fillData() {
@@ -91,6 +90,7 @@ function fillData() {
   document.querySelector("#tider").innerHTML = `<p>${bank.aabningstider}</p>`;
   document.querySelector("#telefon").innerHTML = `<p>${bank.bankTelefon}</p>`;
 }
+
 setInterval(function talTaeller() {
   taellerTal += 0.01;
   storttal.innerHTML = "3.213." + taellerTal.toFixed(2) + "KR";
