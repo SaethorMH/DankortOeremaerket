@@ -125,6 +125,7 @@ Vi er startet med at lave:
 - Header
 - Main
 - Footer
+
   Inde i main vidste vi at der skulle være 5 sektioner
   De indeholder:
 
